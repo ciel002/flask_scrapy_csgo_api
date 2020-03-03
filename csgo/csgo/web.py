@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "欢迎使用flask_scrapy_csgo_api"
+    return "欢迎使用flask_scrapy_csgo_api!"
 
 
 @app.route('/v2/api/5e', methods=['get', 'post'])
