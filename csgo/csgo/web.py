@@ -44,4 +44,4 @@ def b5():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, threaded=True, use_reloader=False, port=8092)
+    app.run(host='0.0.0.0', port=8092, debug=True, threaded=True, use_reloader=False)
