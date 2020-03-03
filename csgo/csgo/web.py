@@ -8,6 +8,11 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 app = Flask(__name__)
 
 
+@app.route('/')
+def index():
+    return "欢迎使用flask_scrapy_csgo_api"
+
+
 @app.route('/v2/api/5e', methods=['get', 'post'])
 def a5e():
     domain = request.args.get('domain')
