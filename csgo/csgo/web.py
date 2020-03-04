@@ -19,7 +19,8 @@ def a5e():
     command = 'scrapy crawl 5e -a domain=' + domain
     command = command.split(" ")
     try:
-        subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
+        res=subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
+        print(res)
         return json.dumps({
             'code': 1
         })
