@@ -34,6 +34,11 @@ def a5e():
 
 @app.route('/v2/api/b5', methods=['get', 'post'])
 def b5():
+    """
+    e.g.
+        api.mingchen.xyz/v2/api/b5?steamid=186939639
+    :return:
+    """
     steamid = request.args.get('steamid')
     command = 'scrapy crawl b5 -a steamid=' + steamid
     command = command.split(" ")
