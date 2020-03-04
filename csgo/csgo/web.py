@@ -17,10 +17,10 @@ def index():
 def a5e():
     domain = request.args.get('domain')
     command = 'scrapy crawl 5e -a domain=' + domain
-    command = command.split(" ")
+    # command = command.split(" ")
     try:
-        res=subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
-        print(res)
+        subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
+        # print(res)
         return json.dumps({
             'code': 1
         })
@@ -42,7 +42,7 @@ def b5():
     """
     steamid = request.args.get('steamid')
     command = 'scrapy crawl b5 -a steamid=' + steamid
-    command = command.split(" ")
+    # command = command.split(" ")
     try:
         subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
         return json.dumps({
