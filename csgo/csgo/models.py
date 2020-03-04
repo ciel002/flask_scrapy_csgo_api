@@ -6,8 +6,8 @@ DeclarativeBase = declarative_base()
 
 
 def db_connect():
-    return create_engine('mysql+mysqlconnector://debian-sys-maint:NH7vup8D4frYbfRI@localhost/spider', echo=True)
-    # return create_engine('mysql+mysqlconnector://ciel:123456@localhost/spider', echo=True)
+    # return create_engine('mysql+mysqlconnector://debian-sys-maint:NH7vup8D4frYbfRI@localhost/spider', echo=True)
+    return create_engine('mysql+mysqlconnector://ciel:123456@localhost/spider', echo=True)
 
 
 def create_table(engine):

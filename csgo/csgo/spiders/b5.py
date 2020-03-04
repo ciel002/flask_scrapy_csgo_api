@@ -39,6 +39,7 @@ class B5Spider(scrapy.Spider):
 
             next_url = 'https://www.b5csgo.com.cn/api/matchDetail/personal/' + str(
                 match['matchId']) + '/' + self.steamId
+            item['url'] = next_url
             yield scrapy.Request(
                 url=next_url,
                 method='GET',
