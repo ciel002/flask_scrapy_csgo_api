@@ -33,7 +33,7 @@ class B5Spider(scrapy.Spider):
             item['map'] = match['mapName'].split("_")[-1]
             item['score'] = match['score']
             item['time'] = match['updateTime']
-            item['achievement'] = match['achievement']
+            # item['achievement'] = match['achievement']
             item['kda'] = match['kad']
             item['result'] = match['result']
 
